@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --ivory:#F3E8D8;
+    --parchment:#EADCC8;
+    --gold:#B08A4A;
+    --deep-gold:#9C7A3C;
+    --maroon:#6B1E1E;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Playfair Display', serif;
+}
+
+body{
+    scroll-behavior:smooth;
+    background:linear-gradient(135deg,var(--ivory),var(--parchment));
+    color:#5a4a3a;
+}
+
+/* Section Layout */
+
+.section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:40px 20px;
+}
+
+h1{
+    font-size:42px;
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+h2{
+    color:var(--deep-gold);
+    margin:15px 0;
+}
+
+.gold-divider{
+    width:120px;
+    height:2px;
+    background:var(--gold);
+    margin:25px auto;
+}
+
+.btn{
+    margin-top:30px;
+    padding:12px 35px;
+    border:none;
+    background:var(--gold);
+    color:white;
+    font-size:16px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:var(--maroon);
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin:15px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    max-width:750px;
+}
+
+input, select{
+    width:80%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.footer{
+    margin-top:30px;
+    font-size:14px;
+    color:#7a6a5a;
+}
+
+.names-list{
+    margin-top:20px;
+    font-size:18px;
+    line-height:1.8;
+}
+
+</style>
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+
+<section class="section">
+    <h1>Royal Wedding Invitation</h1>
+    <div class="gold-divider"></div>
+
+    <p>With the blessings of</p>
+    <h2>Sima Biswas & Sanjay Biswas</h2>
+
+    <p>Request the honor of your presence at the wedding of their beloved daughter</p>
+    <h2>Sanjana Biswas</h2>
+
+    <p>With</p>
+    <h2>Secret</h2>
+    <p><!-- Groom Parents Blank --></p>
+
+    <button class="btn" onclick="enterInvitation()">Enter Invitation</button>
+</section>
+
+<!-- PAGE 2 -->
+
+<section class="section">
+
+    <h1>Wedding Events</h1>
+    <div class="gold-divider"></div>
+
+    <div class="card">
+        <h2>Haldi Ceremony</h2>
+        <p>10 March 2026 – 11:00 AM</p>
+        <p>The Oberoi Udaivilas, Udaipur</p>
+        <p>Dress Code: Yellow Traditional Attire</p>
+    </div>
+
+    <div class="card">
+        <h2>Mehendi Ceremony</h2>
+        <p>11 March 2026 – 2:00 PM</p>
+        <p>Taj Falaknuma Palace, Hyderabad</p>
+        <p>Dress Code: Green Festive Wear</p>
+    </div>
+
+    <div class="card">
+        <h2>Sangeet Night</h2>
+        <p>12 March 2026 – 7:00 PM</p>
+        <p>The Leela Palace, Jaipur</p>
+        <p>Dress Code: Glamorous Evening Attire</p>
+    </div>
+
+    <div class="card">
+        <h2>Wedding Ceremony</h2>
+        <p>13 March 2026 – 6:00 PM</p>
+        <p>Umaid Bhawan Palace, Jodhpur</p>
+        <p>Dress Code: Royal Traditional Attire</p>
+    </div>
+
+</section>
+
+<!-- PAGE 3 -->
+
+<section class="section">
+
+    <h1>Itinerary & RSVP</h1>
+    <div class="gold-divider"></div>
+
+    <div class="card">
+        <p>Day 1 – Welcome Guests & Haldi Ceremony</p>
+        <p>Day 2 – Mehendi Celebration</p>
+        <p>Day 3 – Grand Sangeet Night</p>
+        <p>Day 4 – Royal Wedding Ceremony & Reception</p>
+    </div>
+
+    <h2>RSVP</h2>
+
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+
+    <select>
+        <option>Will You Attend?</option>
+        <option>Yes, With Pleasure</option>
+        <option>Regretfully No</option>
+    </select>
+
+    <button class="btn">Submit</button>
+
+</section>
+
+<!-- PAGE 4 -->
+
+<section class="section">
+
+    <h1>With Best Compliments</h1>
+    <div class="gold-divider"></div>
+
+    <div class="names-list">
+        Sagnik<br>
+        Anubhav<br>
+        Ilhan<br>
+        Atulya Mishra<br>
+        Kuki<br>
+        Srishti<br>
+        Ridhi<br>
+        Kavya
+    </div>
+
+    <div class="footer">
+        We look forward to celebrating this joyous occasion with you.
+    </div>
+
+</section>
+
+<script>
+function enterInvitation(){
+    document.getElementById("bgMusic").play();
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
